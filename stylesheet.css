@@ -1,18 +1,60 @@
+/* Styling for all devices */
+
 body {
     background-color: #06bbff;
     color: white;
     margin: 0px;
+    padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+
+#contentwrapper1{
+    height: 100vh;
+    align-content: center;
+    background-color:  #06bbff;
+}
+
+#contentwrapper2{
+    height: 100vh;
+    align-content: center;
+    background-color: black;
+}
+
+#contentwrapper3{
+    height: 100vh;
+    align-content: center;
+    background-color:  #06bbff;
+}
+
+#contentwrapper4{
+    height: 100vh;
+    align-content: center;
+    background-color: black;
+}
+
+.bodycontent{
+    margin-left: 10%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80;
+    width: 80%;
+    border: 2px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Styling for mobile */
 
 /* Styling for navbar */
 .navbar{
     text-align: center;
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
     padding: 0px;
+    top: 0;
 }
 
 ul{
@@ -30,11 +72,13 @@ li a {
     color : white;
     text-align: center;
     text-decoration: none;
-    
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .navbartext{
-    padding: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
 }
 
 .navbartext:hover{
@@ -58,6 +102,7 @@ li a {
     width: 100%;
 }
 
+/* Styling for devices larger than mobiles */
 @media only screen and (min-width: 768px){
     /* Styling for navbar */
     .navbar{
@@ -67,6 +112,7 @@ li a {
         font-family: 'Montserrat', sans-serif;
         margin: 0px;
         padding: 0px;
+        position: fixed;
     }
 
     ul{
