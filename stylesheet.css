@@ -1,0 +1,118 @@
+body {
+    background-color: #06bbff;
+    color: white;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling for navbar */
+.navbar{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+li{
+    width: 20%;
+    float: left;
+}
+
+li a {
+    display: block;
+    color : white;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.navbartext{
+    padding: 5px;
+}
+
+.navbartext:hover{
+    border-bottom: 1px solid white;
+}
+
+/* Styling for the Linkedin & Github buttons */
+
+#desktopicons {
+    display: none;
+}
+
+#mobileicons {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px){
+    /* Styling for navbar */
+    .navbar{
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    ul{
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    li{
+        width: 100px;
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color : white;
+        text-align: center;
+        text-decoration: none;
+        
+    }
+
+    .navbartext{
+        padding: 5px;
+    }
+
+    .navbartext:hover{
+        border-bottom: 1px solid white;
+    }
+
+    /* Styling for the Linkedin & Github buttons */
+    #desktopicons{
+        display: inline;
+        float: right;
+    }
+
+    .navbarbuttons{
+        display: none
+    }
+
+    .desktoplink{
+        display: inline-block;
+        width: 50px;
+    }
+
+    #mobileicons{
+        display: none;
+    }
+    
+}
+
