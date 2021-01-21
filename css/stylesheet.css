@@ -429,6 +429,11 @@ p{
         background: #90e1ff;
     }
 
+    .workImg{
+        width: 24%;
+        display: inline-block;
+    }
+
     
 }
 
