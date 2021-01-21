@@ -2,65 +2,93 @@
 <head>
     <title>James Grayson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+            $('#arrow').fadeOut();
+        } else {
+            $('#arrow').fadeIn();
+        }
+        });
+    </script>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar" id="mainnav">
         <ul>
-            <li class="navbartext"><a href="index.html#contentwrapper1">Home</a></li>
-            <li class="navbartext"><a href="index.html#contentwrapper2">About Me</a></li>
-            <li class="navbartext"><a href="index.html#contentwrapper3">My Work</a></li>
-            <li class="navbartext"><a href="index.html#contentwrapper4">Contact</a></li>
+            <li class="navbartext"><a href="index.html#wHome">Home</a></li>
+            <li class="navbartext"><a href="index.html#wAbout">About Me</a></li>
+            <li class="navbartext"><a href="index.html#wWork">My Work</a></li>
+            <li class="navbartext"><a href="index.html#wContact">Contact</a></li>
         </ul>
         <ul id="desktopicons">
-            <li class="desktoplink"><a href="https://www.linkedin.com/in/james-smith-6826491b8/" class="fa fa-linkedin"></a></li>
-            <li class="desktoplink"><a href="https://github.com/jamesdns" class="fa fa-github"></a></li>
+            <li class="desktoplink"><a href="https://www.linkedin.com/in/james-smith-6826491b8/" class="fab fa-linkedin"></a></li>
+            <li class="desktoplink"><a href="https://github.com/jamesdns" class="fab fa-github"></a></li>
         </ul>
     </div>
     <div class="navbar">
         <ul id="mobileicons">
-            <li class="mobilelink"><a href="https://www.linkedin.com/in/james-smith-6826491b8/" class="fa fa-linkedin"></a></li>
-            <li class="mobilelink"><a href="https://github.com/jamesdns" class="fa fa-github"></a></li>
+            <li class="mobilelink"><a href="https://www.linkedin.com/in/james-smith-6826491b8/" class="fab fa-linkedin"></a></li>
+            <li class="mobilelink"><a href="https://github.com/jamesdns" class="fab fa-github"></a></li>
         </ul>
     </div>
-    <div id="contentwrapper1">
-        <div class="bodycontent">
-            <h1> Hi, I'm James </h1>
-            <p> An aspiring web developer/full stack developer</p>
+    <div id="wHome">
+        <div id="bodycontent1">
+            <h1> Hello  </h1>
+            <p> I'm James, an aspiring web developer/full stack developer</p>
         </div>
+        <div id="arrow" class="bounce">
+            <a class="fas fa-chevron-down fa-3x" href="index.html#wAbout"></a>
+          </div>
     </div>
-    <div id="contentwrapper2">
-        <div class="bodycontent">
+    <div id="wAbout">
+        <div id="bodycontent2">
             <h1> About me </h1>
             <p> I am a student currently studying Computer Science at Plymouth University and have a great interest in Web Development.
                 I have always been a creative person and have been drawn to technology. As such, I enjoy web development very much and hope to make a career in the indsutry.
             </p>
-            <p> I have experience with C#, Java, HTML, CSS, JavaScript, JQuery and I am currently building two websites for university projects that also utilise ExpressJS, 
-                AJAX, JSON, NodeJS and MongoDB. I am also starting to learn Bootstrap and Wordpress in my own time.
-            </p>
+            <p> I have experience with the following technologies: </p><p>C#, Java, HTML, CSS, JavaScript, JQuery, ExpressJS, </p><p>AJAX, JSON, NodeJS, MongoDB, GitHub, Travis CI & Heroku. </p>
         </div>
     </div>
-    <div id="contentwrapper3">
-        <div class="bodycontent">
-            <h1> My Work </h1>
-            <p> Currently, I am building a website for a florist & in a few months I will begin making a website for a property maintenance company as well.
-                Once completed, the links to the websites will be available here.
-            </p>
+    <div id="wWork">
+        <div id="bodycontent3">
+            <div id="workHeader">
+                <h1> My Work </h1>
+                <p> So far I have built three websites, two for university and one for a business.</p>
+                <label class="hyperlinkLabel"> Scroll down to see my previous websites or </label>
+                <span id="hyperlink"><a href="work.html"> click here </a><label class="hyperlinkLabel"> for full information </label></span><br><br>
+            </div>
+            <h1> Websites for businesses </h1>
+            <div class="websiteBox">
+                <label class="hyperlinkLabel"> Belladonna (Florist Website) - </label><span id="hyperlink"><a href="www.belladonnacornwall.co.uk">Go to website</a></span>
+                <br><br><img class ="indexImg" src="images/belladonnaIndex.PNG">
+            </div>
+            <h1> Websites for University</h1>
+            <div class="websiteBox">
+                <label class="hyperlinkLabel"> Pooch Parlor - </label><span id="hyperlink"><a href="work.html#poochParlor">View information</a></span>
+                <br><br><img class ="indexImg" src="images/poochparlorIndex.PNG">
+            </div>
+            <div class="websiteBox">
+                <label class="hyperlinkLabel"> Pizza Time - </label><span id="hyperlink"><a href="work.html#pizzaTime">View information</a></span>
+                <br><br><img class ="indexImg" src="images/pizzatimeIndex.PNG">
+            </div>
         </div>
     </div>
-    <div id="contentwrapper4">
-        <div class="bodycontent">
+    <div id="wContact">
+        <div id="bodycontent4">
             <h1> Contact </h1>
             <p> Below are links to my Linkedin profile & GitHub account</p>
             <div class="contactButtons">
-                <li class="contactButton"><a href="https://www.linkedin.com/in/james-smith-6826491b8/" class="fa fa-linkedin"></a></li>
+                <li class="contactButton"><a href="https://www.linkedin.com/in/james-smith-6826491b8/" class="fab fa-linkedin fa-2x"></a></li>
             </div>
             <div class="contactButtons">
-                <li class="contactButton"><a href="https://github.com/jamesdns" class="fa fa-github"></a></li>
+                <li class="contactButton"><a href="https://github.com/jamesdns" class="fab fa-github fa-2x"></a></li>
             </div>
         </div>
     </div>
