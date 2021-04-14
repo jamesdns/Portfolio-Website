@@ -1,0 +1,254 @@
+@import './variables';
+@import './navbar';
+@import './arrow';
+@import './scrollbar';
+
+/* Styling for all devices */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $primaryColour;
+    color: white;
+    margin: 0px;
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    a {
+        word-wrap: break-word;
+    }
+}
+
+
+
+#wHome{
+    height: 100vh;
+    align-content: center;
+    background-color:  $primaryColour;
+    #bodycontent1{
+        margin-top: 60%;
+        display: inline-block;
+        width: 80%;
+        padding-top: 50px;
+        margin-left: 10%;
+        border: 2px solid white;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+#wAbout{
+    background-color: black;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    #bodycontent2{
+        width: 80%;
+        padding-top: 100px;
+        margin-left: 10%;
+        border: 2px solid white;
+        padding: 5px;
+    }
+}
+
+#wWork{
+    align-content: center;
+    background-color:  $primaryColour;
+    #bodycontent3{
+        display: inline-block;
+        width: 80%;
+        padding-top: 50px;
+        margin: 15% 0% 5% 10%;
+        border: 2px solid white;
+        padding: 5px;
+        text-align: center;
+    }
+    .websiteBox{
+        padding: 15px;
+        width: 90%;
+        display: inline-block;
+    }
+    
+    #workHeader{
+        border-bottom: 2px solid white;
+    }
+
+    .indexImg{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#wContact{
+    height: 100vh;
+    background-color: black;
+    #bodycontent4{
+        margin-top: 60%;
+        display: inline-block;
+        width: 80%;
+        padding-top: 50px;
+        margin-left: 10%;
+        border: 2px solid white;
+        padding: 5px;
+        text-align: center;
+    }
+    li{
+        width: 100px;
+        float: left;
+        background-color: black;
+    }
+    li a {
+        display: block;
+        color : white;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        font-size: x-large;
+    }
+}
+
+/* Styling for the Linkedin & Github buttons */
+
+#desktopicons {
+    display: none;
+}
+
+#mobileicons {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contactButton{
+    text-align: center;
+    display:block;
+}
+
+.contactButtons{
+    display:inline-block;
+}
+
+
+
+/* Styling for devices larger than mobiles */
+@media only screen and (min-width: 768px ) {
+    
+    p{
+        font-size: 25px;
+    }
+
+    /* Styling for the Linkedin & Github buttons */
+    #desktopicons{
+        display: inline;
+        float: right;
+    }
+
+    .desktoplink{
+        display: inline-block;
+        width: 50px;
+    }
+
+    #mobileicons{
+        display: none;
+    }
+    /* Index page styling */
+    #wHome{
+        height: 100vh;
+        align-content: center;
+        background-color:  $primaryColour;
+        #bodycontent1{
+            margin-top: 20%;
+            display: inline-block;
+            width: 80%;
+            padding-top: 50px;
+            margin-left: 10%;
+            border: 2px solid white;
+            padding: 5px;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+    }
+    
+    #wAbout{
+        height: 100vh;
+        background-color: black;
+        align-content: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        #bodycontent2{
+            margin-top: 10%;
+            margin-right: 10%;
+            display: inline-block;
+            border: 2px solid white;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+    }
+
+    #wWork{
+        align-content: center;
+        background-color:  $primaryColour;
+        #bodycontent3{
+            margin-top: 15%;
+            display: inline-block;
+            width: 80%;
+            padding-top: 50px;
+            margin-left: 10%;
+            border: 2px solid white;
+            padding: 5px;
+            text-align: center;
+            scroll-behavior: smooth;
+            .websiteBox{
+                padding: 15px;
+                width: 45%;
+                display: inline-block;
+                .indexImg{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            #hyperlink{
+                font-size: 30px;
+            }
+            .hyperlinkLabel{
+                font-size: 30px;
+            }
+        }
+    }
+    
+    #wContact{
+        height: 100vh;
+        background-color: black;
+        #bodycontent4{
+            margin-top: 20%;
+            display: inline-block;
+            width: 80%;
+            padding-top: 50px;
+            margin-left: 10%;
+            border: 2px solid white;
+            padding: 5px;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+        li{
+            width: 100px;
+            float: left;
+            background-color: black;
+        }
+        li a {
+            display: block;
+            color : white;
+            text-align: center;
+            text-decoration: none;
+            background-color: black;
+            font-size: xx-large;
+        }
+    }
+}
+
