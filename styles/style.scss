@@ -2,10 +2,14 @@
 @import './navbar';
 @import './arrow';
 @import './scrollbar';
+@import './gradsvg';
+@import './modal';
 
-/* Styling for all devices */
+/* Styling for mobile */
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,12 +18,11 @@ body {
     margin: 0px;
     padding-top: 10px;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
     a {
         word-wrap: break-word;
     }
 }
-
-
 
 #wHome{
     height: 100vh;
@@ -41,41 +44,89 @@ body {
     background-color: black;
     text-align: center;
     padding: 20px 0px 20px 0px;
-    #bodycontent2{
-        width: 80%;
-        padding-top: 100px;
-        margin-left: 10%;
-        border: 2px solid white;
-        padding: 5px;
+    #backgroundContainer{
+        height: 100vh;
+        background-color: black;
+        align-content: center;
+        overflow-x: hidden;
+        #backgroundContent{
+            margin-top: 15%;
+            margin-bottom: -50px;
+        }
+        #gradHatDesktop{
+            display: none;
+        }
+        #gradHatMobile{
+            display: inline-block;
+        }
+        #gradSVGContainerMobile{
+            width: 50%;
+            float: right;
+        }
+        .bodycontent2{
+            width: 80%;
+            padding-top: 100px;
+            margin-left: 10%;
+            padding: 5px;
+            width: auto;
+            top: 400px;
+            h1 {
+                color: $primaryColour;
+            }
+            p {
+                font-size: large;
+                text-align: left;
+            }
+        }
+        #skillsContent {
+            h1 {
+                color: $primaryColour;
+                text-align: left;
+            }
+        }
+    }
+    #skillsContainer{
+        .bodycontent2{
+            h1 {
+                color: $primaryColour;
+            }
+        }
     }
 }
 
 #wWork{
     align-content: center;
     background-color:  $primaryColour;
+    margin-bottom: 20px;
+    .workContainer{
+        margin-left: 10%;
+        margin-right: 10%;
+        align-content: center;
+    }
     #bodycontent3{
+        margin-top: 15%;
         display: inline-block;
-        width: 80%;
-        padding-top: 50px;
-        margin: 15% 0% 5% 10%;
-        border: 2px solid white;
-        padding: 5px;
-        text-align: center;
-    }
-    .websiteBox{
-        padding: 15px;
-        width: 90%;
-        display: inline-block;
-    }
-    
-    #workHeader{
-        border-bottom: 2px solid white;
-    }
-
-    .indexImg{
-        object-fit: cover;
         width: 100%;
-        height: 100%;
+        border: 2px solid white;
+        text-align: center;
+        scroll-behavior: smooth;
+        h1 {
+            width: 100%;
+        }
+        h2 {
+            font-size: x-large;
+            font-weight: 500;
+        }
+        h3{
+            font-size: x-large;
+            font-weight: 700;
+        }
+    }
+    .websiteImg{
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
     }
 }
 
@@ -107,6 +158,14 @@ body {
     }
 }
 
+#skillsImg{
+    display: none;
+}
+#mobileSkillsImg{
+    display: inline-block;
+    width: 100%;   
+    margin-left: 10%;
+}
 /* Styling for the Linkedin & Github buttons */
 
 #desktopicons {
@@ -136,10 +195,16 @@ body {
 
 
 /* Styling for devices larger than mobiles */
-@media only screen and (min-width: 768px ) {
+@media only screen and (min-width: 1000px ) {
+
     
     p{
         font-size: 25px;
+    }
+
+    #bodyWrapper{
+        scroll-snap-type: y mandatory;
+        overflow-x: hidden;
     }
 
     /* Styling for the Linkedin & Github buttons */
@@ -157,6 +222,10 @@ body {
         display: none;
     }
     /* Index page styling */
+    .bodyBlock{
+        scroll-snap-align: start;
+    }
+
     #wHome{
         height: 100vh;
         align-content: center;
@@ -175,50 +244,104 @@ body {
     }
     
     #wAbout{
-        height: 100vh;
-        background-color: black;
-        align-content: center;
-        overflow-y: auto;
-        overflow-x: hidden;
-        #bodycontent2{
-            margin-top: 10%;
-            margin-right: 10%;
-            display: inline-block;
-            border: 2px solid white;
-            text-align: center;
-            scroll-behavior: smooth;
+        #backgroundContainer{
+            height: 100vh;
+            background-color: black;
+            align-content: center;
+            overflow-x: hidden;
+            #backgroundContent{
+                width: 800px;
+            }
+            #gradSVGContainer{
+                display: inline-block;
+                margin-top: 100px;
+                width: 30%;
+                padding-top: 100px;
+                padding-left: 200px;
+            }
+            #gradHatDesktop{
+                display: inline-block;
+            }
+            #gradHatMobile{
+                display: none;
+            }
+            .bodycontent2{
+                margin-left: 100px;
+                display: inline-block;
+                border: 2px solid $primaryColour;
+                padding: 30px;
+                
+                width: 500px;
+                top: 400px;
+                h1 {
+                    color: $primaryColour;
+                }
+                p {
+                    font-size: x-large;
+                    text-align: left;
+                }
+            }
+        }
+        #skillsContainer{
+            height: 100vh;
+            max-height: 100vh;;
+            background-color: black;
+            align-content: center;
+            overflow-x: hidden;
+            position: relative;
+            #skillsContent{
+                top: 150px;
+                position: absolute;
+                width: 800px;
+            }
+            .bodycontent2{
+                margin-left: 100px;
+                display: inline-block;
+                border: 2px solid $primaryColour;
+                padding: 30px;
+                width: 500px;
+                top: 400px;
+                h1 {
+                    color: $primaryColour;
+                }
+                p {
+                    font-size: x-large;
+                    text-align: left;
+                }
+            }
+            #skillsImg{
+                display: inline-block;
+                
+            }
+            #mobileSkillsImg{
+                display: none;
+            }
         }
     }
 
     #wWork{
         align-content: center;
         background-color:  $primaryColour;
+        margin-bottom: 20px;
+        .workContainer{
+            margin-left: 10%;
+            margin-right: 10%;
+            align-content: center;
+        }
         #bodycontent3{
             margin-top: 15%;
             display: inline-block;
-            width: 80%;
+            
             padding-top: 50px;
-            margin-left: 10%;
             border: 2px solid white;
             padding: 5px;
             text-align: center;
             scroll-behavior: smooth;
-            .websiteBox{
-                padding: 15px;
-                width: 45%;
-                display: inline-block;
-                .indexImg{
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            #hyperlink{
-                font-size: 30px;
-            }
-            .hyperlinkLabel{
-                font-size: 30px;
-            }
+        }
+        .websiteImg{
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
     }
     
