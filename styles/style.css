@@ -32,6 +32,7 @@
   text-decoration: none;
   margin-left: 0px;
   padding-left: 0px;
+  font-size: small;
 }
 
 .navbar .navbartext {
@@ -517,6 +518,7 @@ body a {
 }
 
 #wAbout #backgroundContainer {
+  overflow-y: hidden;
   height: 100vh;
   background-color: black;
   -ms-flex-line-pack: center;
@@ -565,6 +567,10 @@ body a {
   text-align: left;
 }
 
+#wAbout #skillsContainer {
+  overflow-y: hidden;
+}
+
 #wAbout #skillsContainer .bodycontent2 h1 {
   color: #06bbff;
 }
@@ -602,6 +608,7 @@ body a {
 }
 
 #wWork #bodycontent3 h3 {
+  display: inline-block;
   font-size: x-large;
   font-weight: 700;
 }
@@ -729,6 +736,7 @@ body a {
     -ms-flex-line-pack: center;
         align-content: center;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
   #wAbout #backgroundContainer #backgroundContent {
     width: 800px;
@@ -769,6 +777,7 @@ body a {
         align-content: center;
     overflow-x: hidden;
     position: relative;
+    overflow-y: hidden;
   }
   #wAbout #skillsContainer #skillsContent {
     top: 150px;
@@ -816,6 +825,9 @@ body a {
     padding: 5px;
     text-align: center;
     scroll-behavior: smooth;
+  }
+  #wWork #bodycontent3 h3 {
+    display: none;
   }
   #wWork .websiteImg {
     width: 100%;
